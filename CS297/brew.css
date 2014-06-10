@@ -1,0 +1,457 @@
+*{
+	 padding : 0;
+	 margin : 0;
+	 border : 0;
+}
+body{
+	 background-image : url('images/bi-drawing00.png');
+	 background-attachment : fixed;
+	 background-size : 100% auto;
+}
+.blended_grid{
+	 display : block;
+	 width : 1000px;
+	 overflow : auto;
+	 margin : 50px auto 0 auto;
+}
+.pageHeader{
+	 float : left;
+	 clear : none;
+	 height : 200px;
+	 width : 1000px;
+	 background-image: url("images/header.png");
+	 background-size : 100% auto;
+
+}
+.pageNavigation{
+	 background-color : rgba(0, 0, 0, 0.0);
+	 float : left;
+	 clear : none;
+	 height : 55px;
+	 width : 1000px;
+}
+.pageLeftMenu{
+	 background-color : rgba(0, 0, 0, 0.5);
+	 float : left;
+	 clear : none;
+	 height : 600px;
+	 width : 160px;
+}
+.pageContent{
+	 background-color : rgba(0, 0, 0, 0.5);
+	 float : left;
+	 clear : none;
+	 height : 600px;
+	 width : 680px;
+}
+.pageRightMenu{
+	 background-color : rgba(0, 0, 0, 0.5);
+	 float : left;
+	 clear : none;
+	 height : 600px;
+	 width : 160px;
+}
+.pageFooter{
+	 background-color : rgba(0, 0, 0, 0.8);
+	 float : left;
+	 clear : none;
+	 height : 100px;
+	 width : 1000px;
+}
+#m
+/* CONTENT */
+#content { }
+#content p { margin:20px; }
+
+/* MENU */
+#menu { margin:17px 0 0 280px;
+       }
+#menu ul { list-style:none; }
+#menu ul li { display:inline; float:left; margin-bottom:20px; }
+
+/* :first-child pseudo selector with rounded top left corner */
+#menu ul li:first-child a { -moz-border-radius-topleft: 12px; 
+-webkit-border-top-left-radius:12px; }
+
+/* :last-child pseudo selector with rounded top right corner */
+#menu ul li:last-child a { -moz-border-radius-topright: 12px;
+ -webkit-border-top-right-radius:12px; }
+
+/* background color set to RGBA, with opacity on 0.3 and also using text-shadow */
+#menu ul li a { padding:20px; background: rgba(0,0,0,0.8);
+ text-decoration: none;
+  font: bold 14px Helvetica, Sans-Serif; letter-spacing: 1px;
+ color: #fff;
+text-shadow: #eee 0px 0px 2px; }
+	
+/* hover state shows a linear gradient and opacity it brought down to 0.9 and also shows a very slight grey gradient on top */
+#menu ul li a:hover { -moz-box-shadow: 0 -5px 10px #777; -webkit-box-shadow: 0 -5px 10px #777;
+	background: -webkit-gradient(
+		linear, right bottom, left top, color-stop(0, rgba(0,0,0,0.6)), color-stop(0.72, rgba(0,0,0,0.6))) !important;
+	background: -moz-linear-gradient(
+		right bottom, rgb(241,63,52) 0%, rgb(241,63,52) 72%) !important;
+	background-color:rgb(241,63,52) !important;
+	-moz-opacity:.90; filter:alpha(opacity=90); opacity:.90; }
+
+/* another RGBA background, now with an opacity of 0.8 */
+#menu ul li a.active { background: rgba(0,0,0,0.5) !important; }
+
+/* Style the form with a colored background, along with curved corners and a drop shadow */
+
+
+#registration-wrapper{ margin: 20px 10px 20px 10px}
+	
+
+
+form {
+  margin: 50px 140px;
+  padding: 40px 20px;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #666;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;  
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+
+/* Give form elements consistent margin, padding and line height */
+
+form ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+form ul li {
+  margin: .9em 0 0 0;
+  padding: 0;
+}
+
+form * {
+  line-height: 1em;
+}
+
+
+/* The field labels */
+
+label {
+	color: rgb(141,24,24);
+  display: block;
+  float: left;
+  clear: left;
+  text-align: right;
+  width: 15%;
+  padding: .4em 0 0 0;
+  margin: .15em .5em 0 0;
+}
+
+
+/* The fields */
+
+input, select, textarea {
+  display: block;
+  margin: 0;
+  padding: .4em;
+  width: 80%;
+}
+
+input, textarea, .date {
+  border: 2px solid #666;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;    
+  border-radius: 5px;
+  background: #fff;
+}
+
+input {
+  font-size: .9em;
+}
+
+select {
+  padding: 0;
+  margin-bottom: 2.5em;
+  position: relative;
+  top: .7em;
+}
+
+textarea {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: .9em;
+  height: 5em;
+  line-height: 1.5em;
+}
+
+textarea#content {
+  font-family: "Courier New", courier, fixed;
+}
+  
+
+/* Place a border around focused fields */
+
+form *:focus {
+  border: 2px solid #7c412b;
+  outline: none;
+}
+
+
+/* Display correctly filled-in fields with a green background */
+
+input:valid, textarea:valid {
+  background: #efe;
+}
+
+
+/* Submit buttons */
+
+a1{
+   display: inline;
+  margin: 0 20px;
+  width: 12em;
+  padding: 10px;
+  border: 2px solid #7c412b;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;  
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  color: #fff;
+  background: #ef7d50;
+  font-weight: bold;
+  -webkit-appearance: none;
+  }
+a1:hover, input[type="submit"]:active {
+  cursor: pointer;
+  background: #fff;
+  color: #ef7d50;
+}
+
+a1:active {
+  background: #eee;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+}
+
+}
+.buttons {
+  text-align: center;
+  margin: 40px 0 0 0;
+  
+}
+
+input[type="submit"] {
+	font-family: Arial, Helvetica, sans-serif;
+	width:8em;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 10px 20px;
+	background: -moz-linear-gradient(
+		top,
+		#fff3db 0%,
+		#ffc821 25%,
+		#ff3c00);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#fff3db),
+		color-stop(0.25, #ffc821),
+		to(#ff3c00));
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #b85f00;
+	-moz-box-shadow:
+		0px 1px 3px rgba(242,234,242,0.5),
+		inset 0px -1px 0px rgba(255,255,255,0.7);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(242,234,242,0.5),
+		inset 0px -1px 0px rgba(255,255,255,0.7);
+	box-shadow:
+		0px 1px 3px rgba(242,234,242,0.5),
+		inset 0px -1px 0px rgba(255,255,255,0.7);
+	text-shadow:
+		0px -1px 1px rgba(000,000,000,0.2),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+
+
+input[type="submit"]:hover, input[type="submit"]:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	width: 8em;
+	color: #ffa200;
+	padding: 10px 20px;
+	background: -moz-linear-gradient(
+		top,
+		#804e80 0%,
+		#ffffff 50%,
+		#d6d6d6);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#804e80),
+		color-stop(0.50, #ffffff),
+		to(#d6d6d6));
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #e3b129;
+	-moz-box-shadow:
+		0px 1px 3px rgba(245,240,245,0.5),
+		inset 0px 0px 3px rgba(222,202,222,1);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(245,240,245,0.5),
+		inset 0px 0px 3px rgba(222,202,222,1);
+	box-shadow:
+		0px 1px 3px rgba(245,240,245,0.5),
+		inset 0px 0px 3px rgba(222,202,222,1);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.1),
+		0px 1px 0px rgba(255,255,255,1);
+}
+
+}
+
+input[type="submit"]:active {
+  background: #eee;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+}
+
+button {
+	margin:10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 10px 20px;
+	background: -moz-linear-gradient(
+		top,
+		#fff3db 0%,
+		#ffc821 25%,
+		#ff3c00);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#fff3db),
+		color-stop(0.25, #ffc821),
+		to(#ff3c00));
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #b85f00;
+	-moz-box-shadow:
+		0px 1px 3px rgba(242,234,242,0.5),
+		inset 0px -1px 0px rgba(255,255,255,0.7);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(242,234,242,0.5),
+		inset 0px -1px 0px rgba(255,255,255,0.7);
+	box-shadow:
+		0px 1px 3px rgba(242,234,242,0.5),
+		inset 0px -1px 0px rgba(255,255,255,0.7);
+	text-shadow:
+		0px -1px 1px rgba(000,000,000,0.2),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+
+  
+}
+a{color:black;}
+
+a:link{
+font: bold 24px;
+color:white;
+}
+a:visited{
+color: purple;
+}
+a:hover a:active{
+
+}
+/* Tables */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr, th, td {
+  padding: 10px;
+  margin: 0;
+  text-align: left;
+}
+
+table, th {
+  border: 1px solid #00a0b0;
+}
+
+th {
+  border-left: none;
+  border-right: none;
+  background: #ef7d50;
+  color: #fff;
+  cursor: default;
+}
+
+tr:nth-child(odd) {
+  background: #fff4cf;
+}
+
+tr:nth-child(even) {
+  background: #fff;
+}
+
+tr:hover {
+  background: #ddd;
+  cursor: pointer;
+}
+
+
+/* Status and error boxes */
+
+.statusMessage, .errorMessage {
+  font-size: .8em;
+  padding: .5em;
+  margin: 2em 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+.statusMessage {
+  background-color: #2b2;
+  border: 1px solid #080;
+  color: #fff;
+}
+
+.errorMessage {
+  background-color: #f22;
+  border: 1px solid #800;
+  color: #fff;
+}
+
+
+h1{
+	color:rgb(141,24,24);
+font: bold 24px Helvetica, Sans-Serif; 
+
+
+}
+
+h2{
+color:rgb(141,24,24);
+font: bold 24px Helvetica, Sans-Serif; 
+
+}
+h3{
+font:bold;
+color:rgb(141,24,24);
+}
+p{
+	color:rgb(141,24,24);
+}
